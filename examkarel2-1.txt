@@ -1,0 +1,33 @@
+iniciar-programa
+define-nueva-instruccion derecha como inicio
+gira-izquierda;
+gira-izquierda;
+gira-izquierda;
+fin;
+define-nueva-instruccion izquierda(n) como
+inicio
+si frente-libre entonces 
+inicio
+mientras junto-a-zumbador hacer coge-zumbador;
+avanza;
+izquierda(sucede(n));
+fin;
+si frente-bloqueado entonces inicio
+mientras junto-a-zumbador hacer coge-zumbador;
+repetir 2 veces gira-izquierda;
+mientras frente-libre hacer inicio
+si junto-a-zumbador entonces mientras junto-a-zumbador hacer coge-zumbador;
+avanza;
+fin;
+mientras algun-zumbador-en-la-mochila hacer deja-zumbador;
+repetir n veces gira-izquierda;
+apagate;
+fin;
+fin;
+
+    inicia-ejecucion
+        repetir 2 veces gira-izquierda;
+        izquierda(2);
+        apagate;
+    termina-ejecucion
+finalizar-programa
